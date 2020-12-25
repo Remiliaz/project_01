@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var n
+        var a
+        var b
+        function myfunction(n, a, b) {
+            do {
+                n = prompt("欢迎使用简易计算器：\n1.加法运算：\n2.减法运算：\n3.乘法运算：\n4.除法运算：\n5.退出：\n请输入你的1选项：")
+
+                switch (n) {
+                    case "1":
+                        a = parseFloat(prompt('请输入第一个数'))
+                        b = parseFloat(prompt('请输入第二个数'))
+                        alert(a + "+" + b + "=" + (a + b))
+                        break
+                    case "2":
+                        a = parseFloat(prompt('请输入第一个数'))
+                        b = parseFloat(prompt('请输入第二个数'))
+                        alert(a + "-" + b + "=" + (a - b))
+                        break
+                    case "3":
+                        a = parseFloat(prompt('请输入第一个数'))
+                        b = parseFloat(prompt('请输入第二个数'))
+                        alert(a + "X" + b + "=" + (a * b))
+                        break
+                    case "4":
+                        a = parseFloat(prompt('请输入第一个数'))
+                        b = parseFloat(prompt('请输入第二个数'))
+                        alert(a + "÷" + b + "=" + (a / b))
+                        break
+                }
+
+            } while (n != 5)
+            alert("成功退出")
+        }
+
+    </script>
+    <style>
+        button {
+            display: block;
+            outline: none;
+            border: 0;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+            width: 300px;
+            height: 300px;
+            font-size: 50px;
+            color: #fff;
+            background-color: blue;
+            margin: 100px auto;
+            border-radius: 10px;
+            transition: 0.4s;
+        }
+
+        button:hover {
+            background-color: skyblue;
+
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="myfunction(n, a, b)">简易计算器</button>
+</body>
+
+</html>
